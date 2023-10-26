@@ -1,0 +1,40 @@
+.cabecalhoCont {
+  //border: 2px solid blue;
+
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+
+.cabecalhoImg {
+  //border: 2px solid red;
+
+  width: 70%;
+  height: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cabecalhoSearch {
+  //border: 2px solid green;
+
+  width: 100%;
+  height: fit-content;
+
+  input {
+    width: 100%;
+    background-color: #d7d7d7;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    border: none;
+  }
+}

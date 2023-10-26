@@ -1,0 +1,34 @@
+.navegacaoContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+
+  background-color: #ffffffd1;
+  backdrop-filter: blur(1px);
+  border-top: 1px solid darkgrey;
+
+  div {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fa-icon {
+      font-size: 20px;
+    }
+  }
+}
+
+.notActive {
+  color: #B3B3B3;
+}
+
+.active {
+  color: #3BB7B9;
+}

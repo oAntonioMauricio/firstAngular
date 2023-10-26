@@ -1,0 +1,15 @@
+<!--<fa-icon [icon]="faBookOpen"></fa-icon>-->
+<div class="navegacaoContainer">
+  <div [ngClass]="active ? 'active': 'notActive'">
+    <fa-icon [icon]="faBookOpen" (click)="helloWorld()"></fa-icon>
+  </div>
+  <div class="notActive">
+    <fa-icon [icon]="faPenNib"></fa-icon>
+  </div>
+  <div class="notActive">
+    <fa-icon [icon]="faBookmark"></fa-icon>
+  </div>
+  <div class="notActive">
+    <fa-icon [icon]="faList"></fa-icon>
+  </div>
+</div>
