@@ -1,19 +1,7 @@
 <div class="favoritosContainer">
 
-  <div class="favorito">
-    <img src="" alt="">
-  </div>
-
-  <div class="favorito">
-    <img src="" alt="">
-  </div>
-
-  <div class="favorito">
-    <img src="" alt="">
-  </div>
-
-  <div class="favorito">
-    <img src="" alt="">
+  <div class="favorito" *ngFor="let favorito of favoritos">
+    <img src="{{favorito.imagem}}" alt="">
   </div>
 
 </div>
