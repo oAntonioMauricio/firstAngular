@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import livros from "src/data/dados_livraria/livros";
 
 @Component({
   selector: 'app-livros',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./livros.component.scss']
 })
 export class LivrosComponent {
-
+  livros = livros;
 }

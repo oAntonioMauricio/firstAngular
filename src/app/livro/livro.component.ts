@@ -9,8 +9,10 @@ import {faEye} from '@fortawesome/free-solid-svg-icons';
 export class LivroComponent {
   faEye = faEye;
 
-  @Input() nome!: string;
-  @Input() autor!: string;
-  @Input() ano_publicacao!: number;
-  @Input() imagem!: string;
+  @Input() id?: number;
+  @Input() nome?: string;
+  @Input() autor?: string;
+  @Input() ano_publicacao?: number;
+  @Input() imagem?: string;
+
 }

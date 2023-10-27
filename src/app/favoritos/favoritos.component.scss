@@ -1,0 +1,21 @@
+.favoritosContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.favorito {
+  border: 2px solid red;
+
+  max-width: 100px;
+  min-width: 100px;
+  width: 100px;
+  min-height: 150px;
+  height: 150px;
+
+  flex: 1;
+}

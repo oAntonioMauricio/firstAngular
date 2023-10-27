@@ -7,6 +7,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { LivrosComponent } from './livros/livros.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
+import { AutoresComponent } from './autores/autores.component';
+import { VendasComponent } from './vendas/vendas.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { NavegacaoComponent } from './navegacao/navegacao.component';
     LivroComponent,
     CabecalhoComponent,
     LivrosComponent,
-    NavegacaoComponent
+    NavegacaoComponent,
+    DetalhesComponent,
+    AutoresComponent,
+    VendasComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

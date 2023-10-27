@@ -1,15 +1,23 @@
 <!--<fa-icon [icon]="faBookOpen"></fa-icon>-->
 <div class="navegacaoContainer">
-  <div [ngClass]="active ? 'active': 'notActive'">
-    <fa-icon [icon]="faBookOpen" (click)="helloWorld()"></fa-icon>
+  <div>
+    <a routerLink="livros" routerLinkActive="active">
+      <fa-icon [icon]="faBookOpen" (click)="helloWorld()"></fa-icon>
+    </a>
   </div>
-  <div class="notActive">
-    <fa-icon [icon]="faPenNib"></fa-icon>
+  <div>
+    <a routerLink="autores" routerLinkActive="active">
+      <fa-icon [icon]="faPenNib"></fa-icon>
+    </a>
   </div>
-  <div class="notActive">
-    <fa-icon [icon]="faBookmark"></fa-icon>
+  <div>
+    <a routerLink="favoritos" routerLinkActive="active">
+      <fa-icon [icon]="faBookmark"></fa-icon>
+    </a>
   </div>
-  <div class="notActive">
-    <fa-icon [icon]="faList"></fa-icon>
+  <div>
+    <a routerLink="vendas" routerLinkActive="active">
+      <fa-icon [icon]="faList"></fa-icon>
+    </a>
   </div>
 </div>
