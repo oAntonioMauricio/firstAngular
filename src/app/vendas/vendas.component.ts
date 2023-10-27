@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import vendas from "src/data/dados_livraria/vendas";
 
 @Component({
   selector: 'app-vendas',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class VendasComponent {
 
+  vendas = vendas;
 }

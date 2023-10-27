@@ -12,6 +12,10 @@ import { AutoresComponent } from './autores/autores.component';
 import { VendasComponent } from './vendas/vendas.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { AppRoutingModule } from './app-routing.module';
+import pt from '@angular/common/locales/pt';
+import {registerLocaleData} from "@angular/common";
+
+registerLocaleData(pt);
 
 @NgModule({
   declarations: [

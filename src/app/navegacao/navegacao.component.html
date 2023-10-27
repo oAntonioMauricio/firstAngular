@@ -1,8 +1,8 @@
 <!--<fa-icon [icon]="faBookOpen"></fa-icon>-->
 <div class="navegacaoContainer">
   <div>
-    <a routerLink="livros" routerLinkActive="active">
-      <fa-icon [icon]="faBookOpen" (click)="helloWorld()"></fa-icon>
+    <a routerLink="livros" [ngClass]="{'active': active('livros') || active('detalhes')}">
+      <fa-icon [icon]="faBookOpen"></fa-icon>
     </a>
   </div>
   <div>

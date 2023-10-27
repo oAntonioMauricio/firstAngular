@@ -1,0 +1,50 @@
+.vendasContainer {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  hr {
+    border: 0.5px solid #e7e7e7;
+    border-radius: 12px;
+    margin: 15px 0;
+  }
+}
+
+.venda {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px 15px 5px 15px;
+  border-left: 3px solid orange;
+}
+
+.vendaText {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  p:first-child {
+    font-weight: bold;
+  }
+
+  p:nth-child(3) {
+    color: darkgrey;
+    font-size: 0.9em;
+  }
+}
+
+.vendaImg {
+  min-width: 65px;
+  width: 65px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

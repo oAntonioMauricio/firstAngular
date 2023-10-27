@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {faBookOpen, faPenNib, faBookmark, faList} from '@fortawesome/free-solid-svg-icons';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navegacao',
@@ -12,9 +13,9 @@ export class NavegacaoComponent {
   faBookmark = faBookmark;
   faList = faList;
 
-  active = true;
-
-  helloWorld() {
-    console.log("teste")
+  active(route: string): boolean {
+    return this.router.url.includes(route);
   }
+
+  constructor(private router: Router) { }
 }

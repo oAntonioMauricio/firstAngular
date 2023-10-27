@@ -17,7 +17,7 @@ interface DetalhesLivros {
   [key: number]: DetalheLivro
 }
 
-export {DetalheLivro, DetalhesLivros};
+export {DetalheLivro, DetalhesLivros, VendaLivro};
 
 const detalhes: DetalhesLivros = {
   1: {

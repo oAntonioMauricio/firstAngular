@@ -1,2 +1,39 @@
-<p>detalhes works!</p>
-<h2>id: {{id_livro}}</h2>
+<div class="detalhesContainer">
+
+  <div class="detalhesBook">
+    <div class="detalhesBookImg">
+      <img src="{{DetalheLivro.imagem}}" alt="">
+      <div class="iconCont">
+        <fa-icon [icon]="faBookmark"></fa-icon>
+      </div>
+    </div>
+    <div class="detalhesBookText">
+      <p>{{DetalheLivro.titulo}}</p>
+      <p>{{DetalheLivro.autor}}</p>
+      <div class="livroPYear">
+        <p>{{DetalheLivro.ano_publicacao}}</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div>
+    <p>{{DetalheLivro.sinopse}}</p>
+  </div>
+
+  <hr>
+
+  <div class="vendasContainer">
+    <div class="vendasTextAndIcon">
+      <p>Vendas</p>
+      <fa-icon [icon]="faChevronDown"></fa-icon>
+    </div>
+    <div class="vendasObject" *ngFor="let venda of DetalheLivro.vendas">
+      <p>{{venda.cliente}}</p>
+      <p>{{venda.data | date: 'dd'}} de {{venda.data | date:'MMMM':'':'pt'}} às {{venda.data | date: 'HH'}}h{{venda.data | date: 'mm'}}</p>
+    </div>
+  </div>
+
+
+</div>

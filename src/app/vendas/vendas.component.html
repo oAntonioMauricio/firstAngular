@@ -1,1 +1,18 @@
-<p>vendas works!</p>
+<div class="vendasContainer">
+
+  <div *ngFor="let venda of vendas">
+    <div class="venda">
+      <div class="vendaText">
+        <p>{{venda.livro}}</p>
+        <p>{{venda.cliente}}</p>
+        <p>{{venda.data | date: 'dd/MM/yyyy'}} às {{venda.data | date: 'HH'}}h{{venda.data | date: 'mm'}}</p>
+      </div>
+      <div class="vendaImg">
+        <img src="{{venda.livro_imagem}}" alt="">
+      </div>
+    </div>
+
+    <hr>
+  </div>
+
+</div>
