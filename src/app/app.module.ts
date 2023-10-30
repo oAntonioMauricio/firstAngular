@@ -12,8 +12,11 @@ import { AutoresComponent } from './autores/autores.component';
 import { VendasComponent } from './vendas/vendas.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import pt from '@angular/common/locales/pt';
 import {registerLocaleData} from "@angular/common";
+import { MultiplyerPipe } from './pipes/multiplyer.pipe';
+import { CapMoreThan4Pipe } from './pipes/cap-more-than4.pipe';
 
 registerLocaleData(pt);
 
@@ -27,7 +30,9 @@ registerLocaleData(pt);
     DetalhesComponent,
     AutoresComponent,
     VendasComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    MultiplyerPipe,
+    CapMoreThan4Pipe
   ],
   imports: [
     BrowserModule,

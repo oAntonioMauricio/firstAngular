@@ -5,7 +5,7 @@
       <div class="vendaText">
         <p>{{venda.livro}}</p>
         <p>{{venda.cliente}}</p>
-        <p>{{venda.data | date: 'dd/MM/yyyy'}} às {{venda.data | date: 'HH'}}h{{venda.data | date: 'mm'}}</p>
+        <p>{{venda.data | date: 'dd'}} de {{venda.data | date:'MMMM':'':'pt'}} às {{venda.data | date: 'HH'}}h{{venda.data | date: 'mm'}}</p>
       </div>
       <div class="vendaImg">
         <img src="{{venda.livro_imagem}}" alt="">
