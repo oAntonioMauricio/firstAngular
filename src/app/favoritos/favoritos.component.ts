@@ -9,17 +9,15 @@ import {LivrosService} from "../services/livros.service";
 })
 export class FavoritosComponent {
 
-  favoritos: Livro[] = [];
-
+  favoritos?: Livro[];
   @Input() imagem?: string;
 
   constructor(private livrosService: LivrosService) {
-
+    this.favoritos = undefined;
   }
 
   ngOnInit(): void {
     this.livrosService.getFavBooks().subscribe((favs) => {
-
       this.favoritos = favs;
       console.log({"livros da API depois do filtro de favs": favs})
     })

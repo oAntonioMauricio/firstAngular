@@ -19,18 +19,23 @@ export class DetalhesComponent {
 
   // attributes
   id_livro: number;
-  detalheLivro: DetalheLivro;
+  detalheLivro?: DetalheLivro | null;
 
   constructor(private route: ActivatedRoute, private livrosService: LivrosService) {
     this.id_livro = route.snapshot.params['id_livro'];
-    this.detalheLivro = <DetalheLivro>{};
+    this.detalheLivro = undefined;
   }
 
   ngOnInit() {
-    this.livrosService.getDetalheLivro(this.id_livro).subscribe((detalheLivro) => {
-      console.log(detalheLivro);
-      this.detalheLivro = detalheLivro;
-    })
+    this.livrosService.getDetalheLivro(this.id_livro).subscribe(
+      (detalheLivro) => {
+        this.detalheLivro = detalheLivro;
+      },
+      (error) => {
+        console.log(error)
+        this.detalheLivro = null;
+      }
+    )
   }
 
   // methods

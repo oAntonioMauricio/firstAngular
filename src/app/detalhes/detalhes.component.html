@@ -1,4 +1,4 @@
-<div class="detalhesContainer">
+<div class="detalhesContainer" *ngIf="detalheLivro">
 
   <div class="detalhesBook">
     <div class="detalhesBookImg">
@@ -38,3 +38,5 @@
 
 
 </div>
+<div *ngIf="detalheLivro === undefined">Loading...</div>
+<div *ngIf="detalheLivro === null">Book doesn't exist.</div>
