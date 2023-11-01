@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import detalhes, {DetalheLivro} from "src/data/dados_livraria/detalhes_livros";
+import {DetalheLivro} from "src/data/dados_livraria/detalhes_livros";
 import {faBookmark} from '@fortawesome/free-regular-svg-icons';
 import {faChevronDown, faBookmark as faBookmarkSolid} from '@fortawesome/free-solid-svg-icons';
 import {LivrosService} from "../services/livros.service";
@@ -19,11 +19,18 @@ export class DetalhesComponent {
 
   // attributes
   id_livro: number;
-  DetalheLivro: DetalheLivro;
+  detalheLivro: DetalheLivro;
 
   constructor(private route: ActivatedRoute, private livrosService: LivrosService) {
     this.id_livro = route.snapshot.params['id_livro'];
-    this.DetalheLivro = detalhes[this.id_livro];
+    this.detalheLivro = <DetalheLivro>{};
+  }
+
+  ngOnInit() {
+    this.livrosService.getDetalheLivro(this.id_livro).subscribe((detalheLivro) => {
+      console.log(detalheLivro);
+      this.detalheLivro = detalheLivro;
+    })
   }
 
   // methods

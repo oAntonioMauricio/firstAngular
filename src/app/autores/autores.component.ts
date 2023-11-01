@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import autores, {Autor} from "src/data/dados_livraria/autores";
-import {AutoresService} from "../services/autores.service";
+import {Autor} from "src/data/dados_livraria/autores";
+import {LivrosService} from "../services/livros.service";
 
 @Component({
   selector: 'app-autores',
@@ -9,17 +9,14 @@ import {AutoresService} from "../services/autores.service";
 })
 export class AutoresComponent {
 
-  constructor(private autoresService: AutoresService) {
-  }
-
   autores: Autor[] = [];
 
-  @Input() nome?: string;
-  @Input() livros?: number;
+  constructor(private livrosService: LivrosService) {
+  }
 
   ngOnInit(): void {
-    this.autoresService.getAutores().subscribe((autores) => {
-      console.log({"autores da API": autores})
+    this.livrosService.getAutores().subscribe((autores) => {
+      console.log({"autores da API": autores});
       this.autores = autores;
     })
   }

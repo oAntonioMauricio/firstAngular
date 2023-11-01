@@ -17,21 +17,11 @@ export class FavoritosComponent {
 
   }
 
-  // ngOnInit(): void {
-  //   this.livrosService.getLivros().subscribe((livros) => {
-  //
-  //     this.favoritos = livros.filter(livro => this.livrosService.checkIfFav(livro.id));
-  //     console.log({"favoritos depois do filtro": this.favoritos})
-  //
-  //     this.livrosService.getFavBooks();
-  //   })
-  // }
-
   ngOnInit(): void {
     this.livrosService.getFavBooks().subscribe((favs) => {
 
       this.favoritos = favs;
-      console.log({"favoritos depois do filtro": favs})
+      console.log({"livros da API depois do filtro de favs": favs})
     })
   }
 

@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Venda} from "src/data/dados_livraria/vendas";
-import {AutoresService} from "../services/autores.service";
-import {VendasService} from "../services/vendas.service";
+import {LivrosService} from "../services/livros.service";
 
 @Component({
   selector: 'app-vendas',
@@ -10,11 +9,11 @@ import {VendasService} from "../services/vendas.service";
 })
 export class VendasComponent {
 
-  constructor(private vendasService: VendasService) {
+  constructor(private livrosService:LivrosService) {
   }
 
   ngOnInit(): void {
-    this.vendasService.getVendas().subscribe((vendas) => {
+    this.livrosService.getVendas().subscribe((vendas) => {
       console.log({"vendas da API": vendas})
       this.vendas = vendas;
     })
@@ -22,6 +21,5 @@ export class VendasComponent {
 
   // attributes
   vendas: Venda[] = [];
-
 
 }

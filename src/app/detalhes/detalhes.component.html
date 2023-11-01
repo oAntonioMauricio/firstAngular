@@ -2,16 +2,16 @@
 
   <div class="detalhesBook">
     <div class="detalhesBookImg">
-      <img src="{{DetalheLivro.imagem}}" alt="">
+      <img src="{{detalheLivro.imagem}}" alt="">
       <div class="iconCont" (click)="toogleFav()">
         <fa-icon [icon]="checkIfFav() ? faBookmarkSolid : faBookmark" id="favIcon"></fa-icon>
       </div>
     </div>
     <div class="detalhesBookText">
-      <p>{{DetalheLivro.titulo}}</p>
-      <p>{{DetalheLivro.autor}}</p>
+      <p>{{detalheLivro.titulo}}</p>
+      <p>{{detalheLivro.autor}}</p>
       <div class="livroPYear">
-        <p>{{DetalheLivro.ano_publicacao}}</p>
+        <p>{{detalheLivro.ano_publicacao}}</p>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
   <hr>
 
   <div>
-    <p>{{DetalheLivro.sinopse}}</p>
+    <p>{{detalheLivro.sinopse}}</p>
   </div>
 
   <hr>
@@ -29,7 +29,7 @@
       <p>Vendas</p>
       <fa-icon [icon]="faChevronDown"></fa-icon>
     </div>
-    <div class="vendasObject" *ngFor="let venda of DetalheLivro.vendas">
+    <div class="vendasObject" *ngFor="let venda of detalheLivro.vendas">
       <p>{{venda.cliente}}</p>
       <p>{{venda.data | date: 'dd'}} de {{venda.data | date:'MMMM':'':'pt'}} às {{venda.data | date: 'HH'}}
         h{{venda.data | date: 'mm'}}</p>
