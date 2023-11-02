@@ -4,6 +4,7 @@ import {Livro} from "../../data/dados_livraria/livros";
 import {Autor} from "../../data/dados_livraria/autores";
 import {Venda} from "../../data/dados_livraria/vendas";
 import {DetalheLivro} from "../../data/dados_livraria/detalhes_livros";
+import {BehaviorSubject} from "rxjs";
 
 const BASE_URL = "https://livrariaupskill.store";
 
@@ -28,6 +29,7 @@ export class LivrosService {
 
   // attributes
   bookmarks: { [key: number]: boolean } = {};
+  searchInput: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
   // methods
   getLivros() {
@@ -36,6 +38,10 @@ export class LivrosService {
 
   getDetalheLivro(id_livro: number) {
     return this.http.get<DetalheLivro>(BASE_URL + `/livros/${id_livro}`);
+  }
+
+  getLivrosSearch(input: string) {
+    return this.http.get<Livro[]>(BASE_URL + `/livros?filtro=${input}`);
   }
 
   toogleFav(id_livro: number): void {
@@ -73,5 +79,8 @@ export class LivrosService {
     return this.http.get<Venda[]>(BASE_URL + "/vendas");
   }
 
+  setInput(input: string) {
+    this.searchInput.next(input);
+  }
 
 }

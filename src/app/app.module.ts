@@ -18,6 +18,7 @@ import {registerLocaleData} from "@angular/common";
 import {MultiplyerPipe} from './pipes/multiplyer.pipe';
 import {CapMoreThan4Pipe} from './pipes/cap-more-than4.pipe';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 registerLocaleData(pt);
 
@@ -39,7 +40,8 @@ registerLocaleData(pt);
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

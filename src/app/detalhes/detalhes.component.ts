@@ -4,6 +4,7 @@ import {DetalheLivro} from "src/data/dados_livraria/detalhes_livros";
 import {faBookmark} from '@fortawesome/free-regular-svg-icons';
 import {faChevronDown, faBookmark as faBookmarkSolid} from '@fortawesome/free-solid-svg-icons';
 import {LivrosService} from "../services/livros.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-detalhes',

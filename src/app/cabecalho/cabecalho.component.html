@@ -4,7 +4,8 @@
   </div>
   <div class="cabecalhoSearch" *ngIf="showSearch">
     <form action="">
-      <input type="text" name="" id="" placeholder="Pesquisar Livro">
+      <input [(ngModel)]="searchInput" (ngModelChange)="inputChange()" type="text" name="searchInput" id=""
+             placeholder="Pesquisar Livro">
     </form>
   </div>
 </div>

@@ -16,10 +16,22 @@ export class LivrosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    // all the books
     this.livrosService.getLivros().subscribe((livros) => {
       console.log({"livros da API": livros})
       this.livros = livros;
     })
+
+    // search books
+    this.livrosService.searchInput.subscribe(newSearch => {
+      console.log({"search": newSearch})
+      this.livrosService.getLivrosSearch(newSearch).subscribe((livros) => {
+        console.log({"livros com search": livros})
+        this.livros = livros;
+      })
+    })
+
   }
 
 }

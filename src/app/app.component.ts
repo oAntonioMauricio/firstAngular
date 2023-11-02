@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
+import {LivrosService} from "./services/livros.service";
+import {CabecalhoComponent} from "./cabecalho/cabecalho.component";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,9 @@ import {NavigationEnd, Router} from "@angular/router";
 export class AppComponent {
   title = 'hello_world';
 
+  constructor(private router: Router, private livrosService: LivrosService) {
+  }
+
   ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
@@ -17,6 +22,5 @@ export class AppComponent {
       window.scrollTo(0, 0);
     });
   }
-  constructor(private router: Router) {}
 
 }
