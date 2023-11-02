@@ -22,9 +22,16 @@ export class CabecalhoComponent {
     });
   }
 
+  ngOnInit() {
+    this.livrosService.searchInput.subscribe(newSearch => {
+      this.searchInput = newSearch;
+    })
+  }
+
   inputChange() {
     this.livrosService.setInput(this.searchInput);
   }
+
 
 
 }
