@@ -11,27 +11,15 @@ import {BehaviorSubject} from "rxjs";
 export class CabecalhoComponent {
 
   showSearch = false;
-  searchInput: string;
 
   constructor(private router: Router, private livrosService: LivrosService) {
-    this.searchInput = "";
 
-    this.router.events.subscribe((event) => {
-      // Update 'showSearch' based on the current path
-      this.showSearch = this.router.url === '/livros';
-    });
+    //
+    // this.router.events.subscribe((event) => {
+    //   // Update 'showSearch' based on the current path
+    //   this.showSearch = this.router.url === '/livros';
+    // });
   }
-
-  ngOnInit() {
-    this.livrosService.searchInput.subscribe(newSearch => {
-      this.searchInput = newSearch;
-    })
-  }
-
-  inputChange() {
-    this.livrosService.setInput(this.searchInput);
-  }
-
 
 
 }

@@ -20,7 +20,6 @@ export class AppComponent {
         return;
       }
       window.scrollTo(0, 0);
-      this.livrosService.setInput("");
     });
   }
 

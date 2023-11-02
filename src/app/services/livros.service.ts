@@ -29,19 +29,19 @@ export class LivrosService {
 
   // attributes
   bookmarks: { [key: number]: boolean } = {};
-  searchInput: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
   // methods
-  getLivros() {
-    return this.http.get<Livro[]>(BASE_URL + "/livros");
+  getLivros(filtro = "", pagina = 0) {
+    return this.http.get<Livro[]>(BASE_URL + "/livros", {
+      params: {
+        filtro,
+        pagina
+      }
+    });
   }
 
   getDetalheLivro(id_livro: number) {
     return this.http.get<DetalheLivro>(BASE_URL + `/livros/${id_livro}`);
-  }
-
-  getLivrosSearch(input: string) {
-    return this.http.get<Livro[]>(BASE_URL + `/livros?filtro=${input}`);
   }
 
   toogleFav(id_livro: number): void {
@@ -77,10 +77,6 @@ export class LivrosService {
 
   getVendas() {
     return this.http.get<Venda[]>(BASE_URL + "/vendas");
-  }
-
-  setInput(input: string) {
-    this.searchInput.next(input);
   }
 
 }

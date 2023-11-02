@@ -6,6 +6,22 @@
   flex-direction: column;
 }
 
+.cabecalhoSearch {
+  //border: 2px solid green;
+
+  width: 100%;
+  height: fit-content;
+
+  input {
+    width: 100%;
+    background-color: #d7d7d7;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    border: none;
+  }
+}
+
 .livrosNavigationCont {
 
   width: 100%;

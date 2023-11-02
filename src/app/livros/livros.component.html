@@ -1,5 +1,12 @@
 <div class="livrosContainer">
 
+  <div class="cabecalhoSearch">
+    <form action="">
+      <input [ngModel]="searchInput.value" (ngModelChange)="searchInput.next($event)" type="text" name="searchInput" id=""
+             placeholder="Pesquisar Livro">
+    </form>
+  </div>
+
   <app-livro *ngFor="let livro of livros"
 
              [id]="livro.id"
@@ -10,11 +17,11 @@
   </app-livro>
 
   <div class="livrosNavigationCont">
-    <div class="arrowAndText">
+    <div class="arrowAndText" (click)="previousPage()">
       <fa-icon [icon]="faChevronLeft"></fa-icon>
       <p>Anterior</p>
     </div>
-    <div class="arrowAndText">
+    <div class="arrowAndText" (click)="nextPage()">
       <p>Seguinte</p>
       <fa-icon [icon]="faChevronRight"></fa-icon>
     </div>
