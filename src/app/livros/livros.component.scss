@@ -5,3 +5,19 @@
   display: flex;
   flex-direction: column;
 }
+
+.livrosNavigationCont {
+
+  width: 100%;
+  height: 45px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrowAndText {
+  display: flex;
+  gap: 5px;
+  color: #3BB7B9;
+}

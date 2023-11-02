@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Livro} from "src/data/dados_livraria/livros";
 import {LivrosService} from "../services/livros.service";
+import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-livros',
@@ -8,6 +9,10 @@ import {LivrosService} from "../services/livros.service";
   styleUrls: ['./livros.component.scss']
 })
 export class LivrosComponent implements OnInit {
+
+  // icons
+  faChevronLeft = faChevronLeft;
+  faChevronRight = faChevronRight;
 
   livros: Livro[] = [];
 
