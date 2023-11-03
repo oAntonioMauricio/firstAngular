@@ -35,7 +35,9 @@ export class LivrosComponent implements OnInit {
 
     // page at zero at a new search
     this.searchInput.subscribe(newSearchInput => {
-      this.page.next(0);
+      if (this.page.value !== 0) {
+        this.page.next(0);
+      }
     });
 
   }
